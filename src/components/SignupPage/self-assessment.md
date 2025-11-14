@@ -1,5 +1,11 @@
 # Self-Assessment: SignUpPage.jsx
 
+### Group 1
+### Name: Sandip Ranjit
+### Date: 14/11/2025
+
+---
+
 ## 1. Functionality
 - **Does the component meet the requirements?**
   - [Y] Does it handle all the specified features (inputs, select options, display greetings)?
