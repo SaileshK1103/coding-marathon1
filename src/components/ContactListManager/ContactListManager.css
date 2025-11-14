@@ -1,1 +1,120 @@
- 
+.contact-list {
+  max-width: 430px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(40, 60, 80, 0.10);
+  background: #f9fafb;
+  font-family: Arial, sans-serif;
+}
+
+.contact-list h1 {
+  color: #22344c;
+  font-size: 1.7rem;
+  margin-bottom: 1.3rem;
+  font-weight: 700;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.form-row label {
+  width: 110px;
+  font-weight: 600;
+  color: #264333;
+  font-size: 1rem;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="url"],
+.contact-form input[type="date"] {
+  flex: 1;
+  padding: 0.38rem 0.7rem;
+  border-radius: 4px;
+  border: 1px solid #b5b5b5;
+  font-size: 1rem;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form input[type="url"]:focus,
+.contact-form input[type="date"]:focus {
+  border-color: #67c76d;
+  outline: none;
+}
+
+.contact-form input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+.contact-form button[type="submit"] {
+  background: #24be5a;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.45rem 1.1rem;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 0.7rem;
+}
+.contact-form button[type="submit"]:hover {
+  background: #158d41;
+}
+
+.contact-list ol {
+  margin-top: 1.5rem;
+  padding-left: 1.2rem;
+}
+
+.contact-list li {
+  background: #fff;
+  padding: 0.8rem 0.9rem;
+  border-radius: 5px;
+  margin-bottom: 0.9rem;
+  box-shadow: 0 1px 4px rgba(160,170,180,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.contact-list li strong {
+  color: #233841;
+}
+
+.contact-list a {
+  color: #217bc7;
+  text-decoration: underline dotted;
+}
+
+.contact-list a:hover {
+  color: #14587a;
+  text-decoration: underline;
+}
+
+.contact-list .delete-btn {
+  background: #e63737;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 0.27rem 0.8rem;
+  font-size: 0.98rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 0.25rem;
+}
+
+.contact-list .delete-btn:hover {
+  background: #bb2222;
+}
