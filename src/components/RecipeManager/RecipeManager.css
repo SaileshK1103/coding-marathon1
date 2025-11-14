@@ -1,1 +1,120 @@
- 
+:root {
+  --clr-primary: #B77466;
+  --clr-primary-light: #E2B59A;
+  --clr-bg: #F4F4F4;
+  --clr-text-dark: #703B3B;
+  --clr-border: #E2B59A;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-family: "Inter", sans-serif;
+  color: var(--clr-primary);
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: var(--clr-primary);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.2s ease;
+  display: inline-block;
+}
+
+.btn:hover {
+  background-color: var(--clr-primary-light);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.recipe-form {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  margin-bottom: 30px;
+}
+
+.recipe-form div {
+  margin-bottom: 15px;
+  background: var(--clr-bg);
+  color: var(--clr-text-dark);
+}
+
+.recipe-form label {
+  font-weight: bold;
+  display: inline-block;
+  width: 120px;
+}
+
+.recipe-form input,
+.recipe-form select {
+  padding: 8px 10px;
+  border: 1px solid var(--clr-border);
+  border-radius: 5px;
+  width: 60%;
+  font-size: 1rem;
+  outline: none;
+}
+
+.recipe-list {
+  list-style-type: none;
+  padding: 0;
+  width: 50%;
+}
+
+.recipe-list li {
+  background: white;
+  border: 1px solid var(--clr-border);
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+  transition: 0.2s ease;
+}
+
+.recipe-list li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.recipe-list li p {
+  margin: 6px 0;
+    color: var(--clr-text-dark);
+}
+.recipe-list li strong {
+  text-decoration: underline;
+  color: var(--clr-primary);
+}
+
+.recipe-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+
+.delete-btn {
+  background: #B77466;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 15px;
+  align-self: flex-end;
+}
+
+.delete-btn:hover {
+  background: #E2B59A;
+}
+
