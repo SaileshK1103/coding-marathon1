@@ -49,11 +49,26 @@
     background-color: #45a049;
   }
 
+  .error-message {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 10px;
+    font-weight: 500;
+  }
+
   .book-count {
     text-align: center;
     color: #666;
     font-weight: bold;
     margin-bottom: 15px;
+    font-size: 16px;
+  }
+
+  .empty-message {
+    text-align: center;
+    color: #999;
+    font-style: italic;
+    padding: 20px;
   }
   
   .book-collection ol {
@@ -69,10 +84,19 @@
     justify-content: space-between;
     align-items: center;
   }
+
+  .book-info {
+    flex: 1;
+  }
+
+  .book-info strong {
+    color: #333;
+  }
   
   .book-collection li button {
     background-color: #e74c3c;
     padding: 6px 12px;
+    margin-left: 10px;
   }
   
   .book-collection li button:hover {
