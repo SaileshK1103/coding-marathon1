@@ -2,8 +2,16 @@ import React, { useState } from "react";
 
 import "./ShoppingCart.css";
 
+/*
+  ShoppingCart component:
+  Lets users add, display, and delete items with details (name, quantity, brand, subtotal, tax, availability).
+  Each input field is controlled by component state, and the full cart is displayed as an ordered list.
+*/
 function ShoppingCart() {
+  // State for the list of items in the cart
   const [items, setItems] = useState([]);
+
+  /// Input state for a new item being added
   const [newItem, setNewItem] = useState({
     itemName: "",
     quantity: "",
@@ -13,18 +21,20 @@ function ShoppingCart() {
     availability: "",
   });
 
+  // Handles all input changes in the form fields and updates corresponding value in newItem state
   function handleInputChange(event) {
     const { name, value } = event.target;
     setNewItem((prev) => ({ ...prev, [name]: value }));
   }
 
-  // Add item
+  // Adds the newItem to the items list if required fields are filled; then resets the form
   function addItem() {
     if (newItem.itemName.trim() === "" || newItem.quantity.trim() === "")
       return;
 
     setItems((prev) => [...prev, newItem]);
 
+    // Reset form after adding
     setNewItem({
       itemName: "",
       quantity: "",
@@ -35,10 +45,12 @@ function ShoppingCart() {
     });
   }
 
-  // Remove item
+  // Removes an item from the cart by its index
   function deleteItem(index) {
     setItems((prev) => prev.filter((_, i) => i !== index));
   }
+
+  // Render form for adding items and the current shopping cart list
   return (
     <div className="shopping-cart">
       <h1>Shopping Cart</h1>
@@ -89,6 +101,7 @@ function ShoppingCart() {
         </select>
         <button onClick={addItem}>Add Item</button>
       </div>
+      {/* Display all cart items */}
       <ol>
         {items.map((item, index) => (
           <li className="item" key={index}>

@@ -1,44 +1,42 @@
-# Self-Assessment: BookCollectionManager.jsx
+# Self-Assessment: ShoppingCart.jsx
 
 ## 1. Functionality
 - **Does the component meet the requirements?**
-  - [ ] Does it handle all the specified features (e.g., adding, removing, or updating books)?
-  - [ ] Are edge cases handled (e.g., empty inputs, duplicate entries)?
-  - [ ] Are there any bugs or unexpected behaviors?
+  - Handles all core features: Users can add items with fields for itemName, quantity, brand, subtotal, tax, and availability. Items display correctly and can be deleted.
+  - Edge cases are partly handled: The “Add Item” function blocks adding when itemName or quantity is blank, but does not check for empty brand, subtotal, tax, or availability. Duplicate items are not blocked.
+  - No major bugs: Form, listing, and remove functions all behave as expected.
 
 - **How well does the component integrate with other parts of the application?**
-  - [ ] Are props and state managed appropriately?
+  - All state is managed locally with useState, so the component doesn’t interfere with the parent layout or navigation. Integration into the full app via routing works smoothly.
 
 ## 2. Code Quality
 - **Readability**
-  - [ ] Is the code easy to understand for other developers?
-  - [ ] Are variable and function names descriptive and meaningful?
+  - The code uses clear and descriptive function and variable names, which makes its purpose easy to understand.
+  - Its logical structure and consistent formatting help maintain readability for any developer reviewing or updating the code
 
 - **Reusability**
-  - [ ] Can the component or parts of it be reused in other parts of the application?
+  - Logic for item listing and cart management could be reused for similar list components. Extraction of the item display into a separate component would make it even more reusable.
 
 - **Comments and Documentation**
-  - [ ] Are there comments explaining complex logic?
-  - [ ] Is there documentation for how to use the component?
+  - [ Yes there are comments explaining the complex logic.] Are there comments explaining complex logic?
+  - [ Inline comments for each major function (addItem, deleteItem, handleInputChange) and for render sections (input form, cart display).] Is there documentation for how to use the component?
 
 ## 3. Performance
 - **Efficiency**
-  - [ ] Are there any unnecessary re-renders or performance bottlenecks?
-  - [ ] Is the component optimized for large datasets (if applicable)?
+  - [The component avoids unnecessary re-renders and performs well for typical cart sizes, but isn’t tuned for very large datasets. ]
 
 - **State Management**
-  - [ ] Is state managed efficiently (e.g., minimal state, derived state)?
-  - [ ] Are hooks (e.g., `useState`, ) used correctly?
+  - [ State is kept minimal.] Is state managed efficiently (e.g., minimal state, derived state)?
+  - [UseState is used correctly for managing items and form data.] Are hooks (e.g., `useState`, ) used correctly?
 
 ## 4. Overall Assessment
 - **Strengths**
-  - List the strengths of the component.
-
+  - Simple, clean logic and UI; easy to maintain and extend.
 - **Areas for Improvement**
-  - List areas where the component could be improved.
+  - Add better input validation and support for edge cases like duplicate items.
 
 - **Action Plan**
-  - Outline specific steps to address the areas for improvement.
+  - Strengthen form checks and refactor for potential scalability.
 
 ## 5. Additional Notes
-- Add any other relevant observations or feedback about the component.
+- The cart’s local state and component-scoped styles keep it isolated and maintainable within the app.
